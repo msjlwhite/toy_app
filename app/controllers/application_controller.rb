@@ -1,2 +1,13 @@
+=begin
+Listing 2.2: Adding a hello action to the Application controller.
+app/controllers/application_controller.rb
+=end
+
+
 class ApplicationController < ActionController::Base
-end
+    protect_from_forgery with: :exception
+  
+    def hello
+      render html: "hello, world!"
+    end
+  end
